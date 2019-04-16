@@ -36,7 +36,11 @@ module.exports = {
         //   presets: ['@babel/preset-env', '@babel/preset-react']
         // },
         exclude: /node_modules/
-      }
+      },
+      {
+        test: /\.(png|jpg|svg|gif)$/,
+        use: ['style-loader']
+      },
     ]
   },
 
