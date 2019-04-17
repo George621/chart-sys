@@ -1,0 +1,18 @@
+
+.window-view{
+  width: 900px;
+  height: 800px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  border-radius: 4px;
+  border: 1px solid bisque ;
+  background-color: #EEE;
+  color: olivedrab;
+  font-size: 24px;
+  .mtitle{
+    color: orange;
+    text-align: center;
+    line-height: 14px;
+  }
+}

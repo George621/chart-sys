@@ -2,23 +2,23 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  // entry: path.join(__dirname,'../src/index.js'),
-  // output: {
-  //  path: path.join(__dirname,'../dist'),
-  //  filename:'bundle.js'
-  // }, // 单入口出口到配置
+  entry: path.join(__dirname,'../src/index.js'),
+  output: {
+   path: path.join(__dirname,'../dist'),
+   filename:'bundle.js'
+  }, // 单入口出口到配置
     // 多入口出口
-  entry:{
-    index: path.join(__dirname,'../src/index.js'),
-    two: path.join(__dirname,'../src/two.js')
-  },
-  output:{
-    path: path.join(__dirname,'../dist'),
-    filename : '[name].js'
-  },
+  // entry:{
+  //   index: path.join(__dirname,'../src/index.js'),
+  //   two: path.join(__dirname,'../src/two.js')
+  // },
+  // output:{
+  //   path: path.join(__dirname,'../dist'),
+  //   filename : '[name].js'
+  // },
   module: {
     rules: [
       {
@@ -48,7 +48,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname,'../src/index.template.html')
     }),
-    new ExtractTextPlugin('css/index.css')
+    // new ExtractTextPlugin('css/index.css')
 
   ]
 }

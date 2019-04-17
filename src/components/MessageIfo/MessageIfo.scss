@@ -1,0 +1,23 @@
+
+.message-info{
+  margin:10px;
+  .mess-box{
+    display: inline-block;
+    .mess-name{
+      display: inline-block;
+    }
+  }
+  .mess-content{
+    margin-left: 26px;
+    background-color: lightgreen;
+    border-radius: 4px;
+  }
+  &.self-messg{
+    .mess-content{
+      margin-right: 26px;
+    }
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+  }
+}

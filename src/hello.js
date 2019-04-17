@@ -5,13 +5,15 @@
 // }
 
 import React, {Component} from 'react'
-
+import WindowView from './components/windowView/windowView.jsx'
 let name = 'saxon'
 
 export default class Hello extends Component{
   render() {
     return (
-      <div>{name}</div>
+      <div>
+        <WindowView />
+      </div>
     )
   }
 }
