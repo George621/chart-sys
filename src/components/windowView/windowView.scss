@@ -1,5 +1,6 @@
 
 .window-view{
+  position: relative;
   width: 900px;
   height: 800px;
   margin: auto;
@@ -10,7 +11,9 @@
   background-color: #EEE;
   color: olivedrab;
   font-size: 24px;
+  overflow: scroll;
   .mtitle{
+    margin: 8px auto;
     color: orange;
     text-align: center;
     line-height: 14px;
