@@ -44,8 +44,10 @@ export default class WindowView extends Component{
   }
   render(){
     return <div className = "window-view">
-      <h4 className = "mtitle">Y-message</h4>
-      {this.viewHandler()}
+      <div className="message-body">
+        <h4 className = "mtitle">Y-message</h4>
+        {this.viewHandler()}
+      </div>
       {/* <MessageIfo isSelf={true} /> */}
       <InputArea sendMessageFather = {this.sendMessageFather} />
     </div>
