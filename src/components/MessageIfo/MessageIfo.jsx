@@ -14,13 +14,13 @@ export default class MessageIfo extends Component{
     let isMySelf = this.state.isSelf;
     let coreInfo = {
       name:'猜猜',
-      content:'wenan ziji zhao shhsi'
+      content:this.props.message
     }
     return <div className = { 'message-info' + ' ' + (isMySelf ? 'self-messg' : '')}>
       <div className="mess-box">
         <span className="mess-name">{coreInfo.name}</span>
       </div>
-      <span className="mess-content">{coreInfo.content}</span>
+      <div className="mess-content">{coreInfo.content}</div>
     </div>
   }
 } 

@@ -9,6 +9,7 @@ export default class InputArea extends Component{
       isSelf: this.props.isSelf
     }
     this.sendMessage = this.sendMessage.bind(this);
+    this.byEnterSend = this.byEnterSend.bind(this);
   }
   sendMessage(){
     let inpVal = this.input.value;
@@ -18,7 +19,8 @@ export default class InputArea extends Component{
     // console.log(e.currentTarget.value) // 获取input value
     let code = e.keyCode;
     if(code === 13){
-      console.log(e.currentTarget.value)
+      console.log(this)
+      this.props.sendMessageFather(e.currentTarget.value)
     }
     // let inpVal = this.input.value;
     // console.log(inpVal)
@@ -26,7 +28,7 @@ export default class InputArea extends Component{
   render(){
     return <div className ="input-box">
       <input className="field" type="text" ref={ input => this.input = input } onKeyDown = { this.byEnterSend }  />
-      <button onClick={ this.sendMessage } className="send-btn">Send</button>
+      <button onClick={ ()=>{this.props.sendMessageFather(this.input.value)}  } className="send-btn">Send</button>
     </div>
   }
 } 
