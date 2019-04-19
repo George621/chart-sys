@@ -1,0 +1,16 @@
+.index-page{
+  width: 900px;
+  height: 600px;
+  margin: auto;
+  .title{
+    padding: 5px;
+    text-align: center;
+    color: rosybrown;
+  }
+  .form-box{
+    display: flex;
+    justify-content: last baseline;
+
+
+  }
+}

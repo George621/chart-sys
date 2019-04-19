@@ -6,13 +6,15 @@
 
 import React, {Component} from 'react'
 import WindowView from './components/windowView/windowView.jsx'
+import Index from './components/Index/Index.jsx'
+
 let name = 'saxon'
 
-export default class Hello extends Component{
+export default class App extends Component{
   render() {
     return (
       <div>
-        <WindowView />
+        <Index />
       </div>
     )
   }

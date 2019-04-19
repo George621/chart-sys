@@ -2,6 +2,8 @@ import './WindowView.scss'
 import React,{ Component } from "react";
 import MessageIfo from "../MessageIfo/MessageIfo.jsx";
 import InputArea from "../InputArea/InputArea.jsx";
+import Index from "../Index/Index.jsx";
+
 
 
 
@@ -44,6 +46,7 @@ export default class WindowView extends Component{
   }
   render(){
     return <div className = "window-view">
+    <Index></Index>
       <div className="message-body">
         <h4 className = "mtitle">Y-message</h4>
         {this.viewHandler()}
