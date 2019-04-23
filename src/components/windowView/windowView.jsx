@@ -15,6 +15,7 @@ export default class WindowView extends Component{
       message: []
     }
   }
+  
   wsFn(context){
     let socket = new WebSocket('ws://127.0.0.1:3000', 'echo-protocol');
     socket.addEventListener('open',function () { })
@@ -24,7 +25,7 @@ export default class WindowView extends Component{
           message: [...this.state.message, newMes]
         })
         this.viewHandler()
-      
+      // console.log( this.state.message)
     }) 
     this.socket = socket;
   }
@@ -43,7 +44,6 @@ export default class WindowView extends Component{
   }
   render(){
     return <div className = "window-view">
-    <Index></Index>
       <div className="message-body">
         <h4 className = "mtitle">Y-message</h4>
         {this.viewHandler()}

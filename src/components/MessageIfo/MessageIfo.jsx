@@ -6,10 +6,17 @@ export default class MessageIfo extends Component{
   constructor(props){
     super(props)
     this.state = {
-      isSelf: this.props.isSelf
+      isSelf: this.props.isSelf,
+      message: this.props.message
     }
   }
-  
+  componentWillReceiveProps(nextProps) {
+    console.log('ne',nextProps.message)
+    this.setState({
+      message:nextProps.message
+    })
+  }
+
   render(){
     let isMySelf = this.state.isSelf;
     let coreInfo = {
@@ -20,7 +27,7 @@ export default class MessageIfo extends Component{
       <div className="mess-box">
         <span className="mess-name">{coreInfo.name}</span>
       </div>
-      <div className="mess-content">{coreInfo.content}</div>
+      <div className="mess-content">{this.state.message}</div>
     </div>
   }
 } 
