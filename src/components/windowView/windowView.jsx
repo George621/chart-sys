@@ -5,9 +5,6 @@ import InputArea from "../InputArea/InputArea.jsx";
 import Index from "../Index/Index.jsx";
 
 
-
-
-
 export default class WindowView extends Component{
 
   constructor(props){
