@@ -17,8 +17,9 @@ export default class WindowView extends Component{
   }
   
   wsFn(context){
+    
     let socket = new WebSocket('ws://127.0.0.1:3000', 'echo-protocol');
-    socket.addEventListener('open',function () { })
+    socket.addEventListener('open',function () { console.log(12121) })
     socket.addEventListener('message',(event)=>{
         let newMes = event.data
         this.setState({
